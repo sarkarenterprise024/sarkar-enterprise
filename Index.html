@@ -1,0 +1,1020 @@
+Here is a complete, production-ready, and mobile-responsive HTML/CSS code for your premium website homepage mockup. It features a modern, high-end cosmetic aesthetic utilizing a clean layout, refined typography, and elegant gold and soft pink accents.
+You can save this code as an .html file (e.g., index.html) and open it in any browser to view the 4K-ready UI/UX design.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarkar Enterprise | Premium Cosmetic & Personal Care Distributor</title>
+    <!-- Google Fonts for Luxury Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- DESIGN SYSTEM & VARIABLES --- */
+        :root {
+            --bg-clean: #FFFFFF;
+            --bg-soft-pink: #FFF5F5;
+            --accent-gold: #D4AF37;
+            --accent-gold-hover: #AA820A;
+            --text-dark: #1A1A1A;
+            --text-muted: #555555;
+            --text-light: #FFFFFF;
+            --border-color: #EAEAEA;
+            --font-luxury: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --max-width: 1440px;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-clean);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: var(--font-luxury);
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            margin-bottom: 50px;
+            font-weight: 500;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo {
+            font-family: var(--font-luxury);
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--text-dark);
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-gold);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: var(--text-light);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* --- HERO BANNER --- */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #FFF9F9 0%, #F5EBE6 100%);
+            padding: 100px 0;
+            overflow: hidden;
+            min-height: calc(100vh - 90px);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-tagline {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-family: var(--font-luxury);
+            font-size: 4.5rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .hero-features {
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            padding-top: 30px;
+            display: flex;
+            gap: 25px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .hero-features span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-features i {
+            color: var(--accent-gold);
+        }
+
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-bg {
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            background-color: var(--bg-soft-pink);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            z-index: 1;
+            animation: morphing 15s infinite alternate ease-in-out;
+        }
+
+        .hero-img {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            filter: drop-shadow(0 20px 35px rgba(0,0,0,0.12));
+        }
+
+        @keyframes morphing {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%; }
+            100% { border-radius: 60% 40% 60% 40% / 40% 50% 50% 60%; }
+        }
+
+        /* --- SECTION CONTROLS --- */
+        section {
+            padding: 100px 0;
+        }
+
+        /* --- BEAUTY CATEGORIES --- */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .category-card {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            background-color: #F9F9F9;
+        }
+
+        .category-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .category-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            transition: background 0.4s ease;
+        }
+
+        .category-name {
+            font-family: var(--font-luxury);
+            font-size: 2rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .category-action {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease;
+        }
+
+        .category-card:hover .category-img {
+            transform: scale(1.08);
+        }
+
+        .category-card:hover .category-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+        }
+
+        .category-card:hover .category-action {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- FEATURED PRODUCTS --- */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--bg-clean);
+            border: 1px solid transparent;
+            padding: 15px;
+            transition: all 0.4s ease;
+        }
+
+        .product-card:hover {
+            border-color: var(--border-color);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+
+        .product-img-wrapper {
+            background-color: #FAFAFA;
+            padding: 30px;
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img-wrapper img {
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--accent-gold);
+            color: var(--text-light);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            font-weight: 600;
+        }
+
+        .product-brand {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .product-title {
+            font-family: var(--font-luxury);
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .product-status {
+            font-size: 0.8rem;
+            color: #25D366;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* --- SPECIAL OFFER BANNER --- */
+        .special-offer {
+            padding: 60px 0;
+            background-color: var(--bg-soft-pink);
+        }
+
+        .offer-banner {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2C2523 100%);
+            color: var(--text-light);
+            padding: 60px 80px;
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--accent-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .offer-banner::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 45%;
+            background: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=800') center right no-repeat;
+            background-size: cover;
+            opacity: 0.25;
+            mix-blend-mode: luminosity;
+        }
+
+        .offer-content {
+            max-width: 60%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .offer-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .offer-title {
+            font-family: var(--font-luxury);
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .offer-title em {
+            color: var(--accent-gold);
+            font-style: normal;
+        }
+
+        .offer-desc {
+            font-size: 0.95rem;
+            color: #CCCCCC;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .offer-btn {
+            background-color: var(--accent-gold);
+            color: var(--text-light);
+            padding: 14px 35px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .offer-btn:hover {
+            background-color: var(--text-light);
+            color: var(--text-dark);
+        }
+
+        /* --- BRAND SHOWCASE --- */
+        .brands-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.75;
+        }
+
+        .brand-logo {
+            font-family: var(--font-luxury);
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            color: #999999;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .brand-logo:hover {
+            color: var(--text-dark);
+        }
+
+        /* --- ABOUT US --- */
+        .about {
+            background-color: var(--bg-soft-pink);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-img-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .about-img-group img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border: 4px solid var(--text-light);
+        }
+
+        .about-img-group img:nth-child(2) {
+            transform: translateY(30px);
+        }
+
+        .about-content {
+            padding-right: 40px;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .about-highlight {
+            font-family: var(--font-luxury);
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            border-left: 2px solid var(--accent-gold);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        /* --- WHY CHOOSE US --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--bg-clean);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: var(--bg-soft-pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px auto;
+        }
+
+        .feature-icon-wrapper i {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+        }
+
+        .feature-title {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #111111;
+            color: var(--text-light);
+            padding: 80px 0 30px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            color: #999999;
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            background-color: #222222;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #CCCCCC;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-gold);
+            color: var(--text-light);
+        }
+
+        .footer-title {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: var(--accent-gold);
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #999999;
+            font-weight: 300;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+            padding-left: 5px;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: #999999;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .footer-contact i {
+            color: var(--accent-gold);
+            margin-top: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222222;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #666666;
+            font-size: 0.8rem;
+        }
+
+        /* --- RESPONSIVE DESIGN (MOBILE & TABLET) --- */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 3.5rem; }
+            .categories-grid, .products-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            .navbar { height: 80px; }
+            .nav-menu, .navbar .whatsapp-btn { display: none; } /* Simplified for mobile mockup */
+            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero-content { max-width: 100%; }
+            .hero-title { font-size: 2.8rem; }
+            .hero-features { justify-content: center; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .about-content { padding-right: 0; }
+            .offer-banner { flex-direction: column; padding: 40px 30px; text-align: center; }
+            .offer-content { max-width: 100%; margin-bottom: 30px; }
+            .offer-title { font-size: 2.2rem; }
+            .categories-grid, .products-grid, .features-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2.2rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- HEADER --- -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">SARKAR <span>ENTERPRISE</span></a>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link">Products</a></li>
+                <li><a href="#" class="nav-link">Brands</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/#" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Order
+            </a>
+        </div>
+    </header>
+
+    <!-- --- HERO BANNER --- -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="hero-tagline">Premium Beauty & Personal Care Products Distributor</p>
+                <h1 class="hero-title">SARKAR ENTERPRISE</h1>
+                <p class="hero-description">Elevating business supply chains with a meticulously curated portfolio of top-tier cosmetic, skincare, and elite personal care brands.</p>
+                <div class="hero-features">
+                    <span><i class="fa-solid fa-circle-check"></i> Trusted Quality</span>
+                    <span><i class="fa-solid fa-circle-check"></i> Reliable Service</span>
+                    <span><i class="fa-solid fa-circle-check"></i> Premium Brands</span>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image-bg"></div>
+                <!-- Modern placeholder layout representing premium cosmetic setting -->
+                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&q=80&w=1000" alt="Premium Cosmetics Portfolio" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- --- CATEGORIES --- -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Curated Categories</h2>
+            <p class="section-subtitle">Exquisite product ranges tailored for elite markets</p>
+            <div class="categories-grid">
+                <!-- Makeup -->
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600" alt="Makeup Portfolio" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-name">Makeup</h3>
+                        <span class="category-action">Explore Collection <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+                <!-- Skincare -->
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&q=80&w=600" alt="Skincare Portfolio" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-name">Skincare</h3>
+                        <span class="category-action">Explore Collection <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+                <!-- Hair Care -->
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600" alt="Hair Care Portfolio" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-name">Hair Care</h3>
+                        <span class="category-action">Explore Collection <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+                <!-- Personal Care -->
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=600" alt="Personal Care Portfolio" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-name">Personal Care</h3>
+                        <span class="category-action">Explore Collection <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FEATURED PRODUCTS --- -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Highly sought-after luxury distribution items</p>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="product-badge">Premium</span>
+                        <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=400" alt="Luxury Elixir Serum">
+                    </div>
+                    <p class="product-brand">Lumière Skin</p>
+                    <h4 class="product-title">Luxury Elixir Oil Serum</h4>
+                    <p class="product-status"><i class="fa-solid fa-circle-check"></i> In Stock / Available</p>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1583209814683-c023dd293cc6?auto=format&fit=crop&q=80&w=400" alt="Matte Lipstick Complex">
+                    </div>
+                    <p class="product-brand">Velvet Cosmetics</p>
+                    <h4 class="product-title">Satin Matte Liquid Lip</h4>
+                    <p class="product-status"><i class="fa-solid fa-circle-check"></i> In Stock / Available</p>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="product-badge">Trending</span>
+                        <img src="https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&q=80&w=400" alt="Hydration Cream">
+                    </div>
+                    <p class="product-brand">Aura Botanicals</p>
+                    <h4 class="product-title">Deep Hydration Infusion Cream</h4>
+                    <p class="product-status"><i class="fa-solid fa-circle-check"></i> In Stock / Available</p>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=400" alt="Luxury Hair Treatment">
+                    </div>
+                    <p class="product-brand">Silk & Co</p>
+                    <h4 class="product-title">Argan Therapy Revitalizing Mask</h4>
+                    <p class="product-status"><i class="fa-solid fa-circle-check"></i> In Stock / Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- SPECIAL OFFER --- -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-banner">
+                <div class="offer-content">
+                    <span class="offer-tag">Exclusive Distribution Privileges</span>
+                    <h3 class="offer-title">Bulk Order Seasonal <em>Incentives & Volumes</em></h3>
+                    <p class="offer-desc">Maximize your retail margins with exceptional tier-based trade discounts on high-demand premium inventory allotments this month.</p>
+                    <a href="#" class="offer-btn">Inquire Deal Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- BRAND SHOWCASE --- -->
+    <section>
+        <div class="container">
+            <div class="brands-container">
+                <div class="brand-logo">E L É G A N C E</div>
+                <div class="brand-logo">V E L V E T</div>
+                <div class="brand-logo">B O T A N I Q U E</div>
+                <div class="brand-logo">G L O W • C O</div>
+                <div class="brand-logo">A U R A</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- ABOUT US --- -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-img-group">
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=500" alt="Luxury Display">
+                <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&q=80&w=500" alt="Premium Products Context">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 25px;">Our Legacy of Quality</h2>
+                <p class="about-text">SARKAR ENTERPRISE is a highly trusted luxury distributor specializing in the supply and management of high-tier cosmetic, skincare, and personal care brands.</p>
+                <p class="about-highlight">"Bridging global luxury standards with reliable local commercial supply chains."</p>
+                <p class="about-text">We partner directly with leading manufacturing setups and retail ecosystems to ensure pristine storage conditions, impeccable authenticity, and consistent retail flow models.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- WHY CHOOSE US --- -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">The Enterprise Advantage</h2>
+            <p class="section-subtitle">Engineered infrastructure focused on your retail success</p>
+            <div class="features-grid">
+                <!-- Advantage 1 -->
+                <div class="feature-box">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="feature-title">Trusted Service</h3>
+                    <p class="feature-desc">Meticulous partner support metrics aligned with corporate B2B framework contracts.</p>
+                </div>
+                <!-- Advantage 2 -->
+                <div class="feature-box">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-gem"></i></div>
+                    <h3 class="feature-title">Quality Products</h3>
+                    <p class="feature-desc">Strict quality verification and directly sourced genuine beauty products.</p>
+                </div>
+                <!-- Advantage 3 -->
+                <div class="feature-box">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-headset"></i></div>
+                    <h3 class="feature-title">Fast Support</h3>
+                    <p class="feature-desc">Direct communications line ensuring quick responses and efficient custom order configurations.</p>
+                </div>
+                <!-- Advantage 4 -->
+                <div class="feature-box">
+                    <div class="feature-icon-wrapper"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <h3 class="feature-title">Reliable Distribution</h3>
+                    <p class="feature-desc">High-speed supply chain logistics keeping your business operations running smooth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">SARKAR <span>ENTERPRISE</span></a>
+                <p>Premier distribution infrastructure specialized in luxury cosmetic lines and personal care brand fulfillment across the commercial region.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products Portfolio</a></li>
+                    <li><a href="#">Partner Brands</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Makeup Products</a></li>
+                    <li><a href="#">Advanced Skincare</a></li>
+                    <li><a href="#">Hair Therapeutics</a></li>
+                    <li><a href="#">Personal Hygiene</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Corporate Office</h4>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> <span>Sarkar Enterprise Commercial Hub, West Bengal, India</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> <span>info@sarkarenterprise.com</span></li>
+                    <li><i class="fa-solid fa-phone"></i> <span>Trade Desk: +91 (Regional Support Desk)</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 SARKAR ENTERPRISE. All Rights Reserved.</p>
+            <p>Designed for Premium Distribution Networks</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+```
