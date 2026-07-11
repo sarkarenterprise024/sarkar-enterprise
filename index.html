@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SARKAR ENTERPRISE | Trusted Distribution Partner</title>
+<title>SARKAR ENTERPRISE | Official Distributor</title>
 
 <meta name="description" content="SARKAR ENTERPRISE - Trusted Distributor of Cosmetics & Personal Care Products.">
+
+<meta name="keywords" content="Sarkar Enterprise, Cosmetics Distributor, Blue Heaven, Mars, Jovees">
+
+<meta name="author" content="SARKAR ENTERPRISE">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,13 +25,22 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f8f9fb;
-color:#333;
+background:#f4f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+:root{
+--blue:#0B3D91;
+--gold:#FFD700;
+--white:#ffffff;
+--dark:#222;
+--gray:#666;
 }
 
 header{
@@ -33,108 +48,233 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background:#0B3D91;
+background:rgba(11,61,145,.97);
+backdrop-filter:blur(8px);
 padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:999;
-box-shadow:0 5px 20px rgba(0,0,0,.15);
+z-index:1000;
+box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
 
 .logo{
-font-size:30px;
-font-weight:700;
-color:#FFD700;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:65px;
+height:65px;
+border-radius:50%;
+background:#fff;
+padding:5px;
+}
+
+.logo-text h2{
+color:var(--gold);
+font-size:28px;
+}
+
+.logo-text p{
+color:#fff;
+font-size:13px;
 }
 
 nav ul{
 display:flex;
 list-style:none;
-gap:30px;
+gap:28px;
 }
 
-nav ul li a{
+nav a{
 text-decoration:none;
 color:#fff;
 font-weight:500;
 transition:.3s;
 }
 
-nav ul li a:hover{
-color:#FFD700;
+nav a:hover{
+color:var(--gold);
 }
 
 .hero{
+
 height:100vh;
-background:linear-gradient(rgba(11,61,145,.82),rgba(11,61,145,.82)),
-url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 text-align:center;
-padding:30px;
+
+padding:40px;
+
+background:
+
+linear-gradient(rgba(11,61,145,.85),rgba(11,61,145,.85)),
+
+url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
 color:#fff;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
 }
 
 .hero h1{
-font-size:60px;
+
+font-size:64px;
+
 margin-bottom:20px;
+
+font-weight:700;
+
+}
+
+.hero h3{
+
+font-size:26px;
+
+color:var(--gold);
+
+margin-bottom:25px;
+
 }
 
 .hero p{
-font-size:22px;
-max-width:850px;
-margin:auto;
+
+font-size:19px;
+
 line-height:1.8;
+
+max-width:750px;
+
+margin:auto;
+
 }
 
-.buttons{
+.btn-group{
+
 margin-top:40px;
+
 }
 
 .btn{
+
 display:inline-block;
-padding:15px 35px;
+
+padding:15px 38px;
+
 margin:10px;
-background:#FFD700;
+
+background:var(--gold);
+
 color:#000;
+
 text-decoration:none;
+
 font-weight:600;
-border-radius:40px;
+
+border-radius:50px;
+
 transition:.3s;
+
 }
 
 .btn:hover{
-transform:translateY(-5px);
+
+transform:translateY(-4px);
+
 background:#fff;
+
+}
+
+.section{
+
+padding:100px 8%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:42px;
+
+color:var(--blue);
+
+margin-bottom:15px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:var(--gray);
+
+margin-bottom:60px;
+
 }
 
 @media(max-width:768px){
 
 header{
+
 flex-direction:column;
+
+padding:15px;
+
 }
 
 .logo{
-font-size:22px;
-margin-bottom:15px;
+
+flex-direction:column;
+
+text-align:center;
+
 }
 
 nav ul{
+
 flex-wrap:wrap;
+
 justify-content:center;
+
 gap:15px;
+
+margin-top:15px;
+
 }
 
 .hero h1{
-font-size:36px;
+
+font-size:38px;
+
+}
+
+.hero h3{
+
+font-size:20px;
+
 }
 
 .hero p{
-font-size:17px;
+
+font-size:16px;
+
 }
 
 }
@@ -148,7 +288,17 @@ font-size:17px;
 <header>
 
 <div class="logo">
-SARKAR ENTERPRISE
+
+<img src="images/logo.png" alt="Sarkar Enterprise Logo">
+
+<div class="logo-text">
+
+<h2>SARKAR ENTERPRISE</h2>
+
+<p>Empowering Retailers with Trusted Brands</p>
+
+</div>
+
 </div>
 
 <nav>
@@ -173,19 +323,21 @@ SARKAR ENTERPRISE
 
 <section class="hero" id="home">
 
-<div>
+<div class="hero-content">
 
 <h1>SARKAR ENTERPRISE</h1>
 
+<h3>Official Distribution Partner</h3>
+
 <p>
 
-Empowering Retailers with Trusted Brands
+Delivering trusted cosmetic and personal care brands with quality, reliability and long-term business relationships.
 
 </p>
 
-<div class="buttons">
+<div class="btn-group">
 
-<a href="#about" class="btn">Know More</a>
+<a href="#about" class="btn">Explore More</a>
 
 <a href="#contact" class="btn">Contact Us</a>
 
@@ -194,88 +346,356 @@ Empowering Retailers with Trusted Brands
 </div>
 
 </section>
+<!-- =========================
+     ABOUT SECTION
+========================= -->
+
+<section class="section" id="about">
+
+<h2 class="title">About Us</h2>
+
+<p class="subtitle">
+Trusted Distribution Partner for Cosmetics & Personal Care Products
+</p>
+
+<div class="about-container">
+
+<div class="about-card">
+
+<h3>Who We Are</h3>
+
+<p>
+
+SARKAR ENTERPRISE is committed to delivering genuine cosmetic and personal care products with professional service, trusted partnerships and customer satisfaction.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>Our Vision</h3>
+
+<p>
+
+To become one of the most trusted and reliable distribution companies by providing quality products, excellent service and long-term business relationships.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>Our Mission</h3>
+
+<p>
+
+Empowering retailers through quality brands, timely delivery and dependable distribution support.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+BUSINESS HIGHLIGHTS
+========================= -->
+
+<section class="section">
+
+<h2 class="title">
+
+Business Highlights
+
+</h2>
+
+<p class="subtitle">
+
+Why retailers choose SARKAR ENTERPRISE
+
+</p>
+
+<div class="highlight-grid">
+
+<div class="highlight-box">
+
+<h2>6+</h2>
+
+<p>Trusted Brands</p>
+
+</div>
+
+<div class="highlight-box">
+
+<h2>100%</h2>
+
+<p>Genuine Products</p>
+
+</div>
+
+<div class="highlight-box">
+
+<h2>Fast</h2>
+
+<p>Delivery Support</p>
+
+</div>
+
+<div class="highlight-box">
+
+<h2>Best</h2>
+
+<p>Customer Service</p>
+
+</div>
+
+</div>
+
+</section>
+
+
 <style>
 
-.section{
-padding:90px 8%;
-}
+.about-container{
 
-.section-title{
-text-align:center;
-font-size:42px;
-color:#0B3D91;
-margin-bottom:20px;
-}
-
-.section-subtitle{
-text-align:center;
-color:#666;
-margin-bottom:60px;
-}
-
-.about-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
 }
 
-.about-box{
+.about-card{
+
 background:#fff;
+
 padding:35px;
+
 border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
 }
 
-.about-box h3{
+.about-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.about-card h3{
+
 color:#0B3D91;
-margin-bottom:20px;
+
+margin-bottom:18px;
+
 }
 
-.about-box p{
+.about-card p{
+
 line-height:1.9;
+
 color:#555;
+
 }
 
-.stats{
+.highlight-grid{
+
 display:grid;
-grid-template-columns:repeat(4,1fr);
+
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
 gap:25px;
-margin-top:60px;
+
+margin-top:50px;
+
 }
 
-.stat{
+.highlight-box{
+
 background:#0B3D91;
-color:#fff;
+
 padding:35px;
-border-radius:15px;
+
 text-align:center;
+
+border-radius:18px;
+
+color:#fff;
+
+transition:.3s;
+
 }
 
-.stat h2{
-font-size:38px;
-color:#FFD700;
-margin-bottom:10px;
+.highlight-box:hover{
+
+background:#062d72;
+
 }
+
+.highlight-box h2{
+
+font-size:42px;
+
+color:#FFD700;
+
+margin-bottom:12px;
+
+}
+
+.highlight-box p{
+
+font-size:17px;
+
+}
+
+</style>
+<!-- =========================
+     OUR BRANDS
+========================= -->
+
+<section class="section" id="brands">
+
+<h2 class="title">Our Trusted Brands</h2>
+
+<p class="subtitle">
+We proudly distribute leading cosmetic and personal care brands.
+</p>
+
+<div class="brand-grid">
+
+<div class="brand-card">
+<div class="brand-icon">BH</div>
+<h3>BLUE HEAVEN</h3>
+<p>Premium Beauty & Cosmetics</p>
+</div>
+
+<div class="brand-card">
+<div class="brand-icon">M</div>
+<h3>MARS</h3>
+<p>Professional Makeup Collection</p>
+</div>
+
+<div class="brand-card">
+<div class="brand-icon">J</div>
+<h3>JOVEES</h3>
+<p>Natural Skin Care Products</p>
+</div>
+
+<div class="brand-card">
+<div class="brand-icon">K</div>
+<h3>KAVERY</h3>
+<p>Beauty Essentials</p>
+</div>
+
+<div class="brand-card">
+<div class="brand-icon">N</div>
+<h3>NEHA</h3>
+<p>Cosmetic Product Range</p>
+</div>
+
+<div class="brand-card">
+<div class="brand-icon">NP</div>
+<h3>NATURES</h3>
+<p>Personal Care Products</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     PRODUCT CATEGORIES
+========================= -->
+
+<section class="section" id="products">
+
+<h2 class="title">Product Categories</h2>
+
+<p class="subtitle">
+Complete Beauty & Personal Care Solutions
+</p>
+
+<div class="product-grid">
+
+<div class="product-card">
+<h3>💄 Makeup</h3>
+<p>Foundation, Compact, Primer, Concealer and more.</p>
+</div>
+
+<div class="product-card">
+<h3>👁 Eye Products</h3>
+<p>Kajal, Eyeliner, Mascara, Eyeshadow.</p>
+</div>
+
+<div class="product-card">
+<h3>💋 Lip Products</h3>
+<p>Lipstick, Lip Balm, Lip Gloss & Lip Liner.</p>
+</div>
+
+<div class="product-card">
+<h3>🧴 Skin Care</h3>
+<p>Face Wash, Cream, Serum, Moisturizer.</p>
+</div>
+
+<div class="product-card">
+<h3>🧴 Hair Care</h3>
+<p>Hair Oil, Shampoo, Conditioner & Treatment.</p>
+</div>
+
+<div class="product-card">
+<h3>✨ Personal Care</h3>
+<p>Daily essentials for personal hygiene and beauty.</p>
+</div>
+
+</div>
+
+</section>
+
+<style>
 
 .brand-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
 margin-top:50px;
 }
 
 .brand-card{
 background:#fff;
 padding:35px;
+border-radius:20px;
 text-align:center;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.35s;
 }
 
 .brand-card:hover{
-transform:translateY(-10px);
+transform:translateY(-12px);
+}
+
+.brand-icon{
+width:70px;
+height:70px;
+background:#0B3D91;
+color:#FFD700;
+font-size:26px;
+font-weight:700;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:auto;
+border-radius:50%;
+margin-bottom:20px;
 }
 
 .brand-card h3{
@@ -284,440 +704,318 @@ margin-bottom:10px;
 }
 
 .brand-card p{
-color:#777;
-font-size:15px;
+color:#666;
+line-height:1.7;
 }
-
-@media(max-width:768px){
-
-.about-grid{
-grid-template-columns:1fr;
-}
-
-.stats{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-</style>
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-
-<h2 class="section-title">
-About Us
-</h2>
-
-<p class="section-subtitle">
-Trusted Distributor of Cosmetics & Personal Care Products
-</p>
-
-<div class="about-grid">
-
-<div class="about-box">
-
-<h3>Who We Are</h3>
-
-<p>
-
-SARKAR ENTERPRISE is committed to supplying genuine cosmetic and personal care products with quality service, reliability and long-term business relationships.
-
-</p>
-
-</div>
-
-<div class="about-box">
-
-<h3>Our Mission</h3>
-
-<p>
-
-To empower retailers with trusted brands, timely delivery and dependable distribution services while maintaining the highest standards of professionalism.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="stats">
-
-<div class="stat">
-
-<h2>6+</h2>
-
-<p>Trusted Brands</p>
-
-</div>
-
-<div class="stat">
-
-<h2>100%</h2>
-
-<p>Genuine Products</p>
-
-</div>
-
-<div class="stat">
-
-<h2>Fast</h2>
-
-<p>Delivery</p>
-
-</div>
-
-<div class="stat">
-
-<h2>24×7</h2>
-
-<p>Support</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- BRANDS -->
-
-<section class="section" id="brands">
-
-<h2 class="section-title">
-
-Our Brands
-
-</h2>
-
-<p class="section-subtitle">
-
-We proudly distribute trusted cosmetic brands.
-
-</p>
-
-<div class="brand-grid">
-
-<div class="brand-card">
-<h3>BLUE HEAVEN</h3>
-<p>Beauty & Cosmetics</p>
-</div>
-
-<div class="brand-card">
-<h3>MARS</h3>
-<p>Professional Makeup</p>
-</div>
-
-<div class="brand-card">
-<h3>JOVEES</h3>
-<p>Herbal Skin Care</p>
-</div>
-
-<div class="brand-card">
-<h3>KAVERY</h3>
-<p>Beauty Essentials</p>
-</div>
-
-<div class="brand-card">
-<h3>NEHA</h3>
-<p>Cosmetic Products</p>
-</div>
-
-<div class="brand-card">
-<h3>NATURES</h3>
-<p>Personal Care</p>
-</div>
-
-</div>
-
-</section>
-<style>
 
 .product-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 margin-top:50px;
 }
 
 .product-card{
 background:#fff;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-text-align:center;
-transition:.3s;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.35s;
 }
 
 .product-card:hover{
-transform:translateY(-10px);
+transform:translateY(-12px);
 }
 
 .product-card h3{
 color:#0B3D91;
-margin-bottom:10px;
-}
-
-.choose-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:50px;
-}
-
-.choose-box{
-background:#0B3D91;
-color:#fff;
-padding:30px;
-border-radius:18px;
-text-align:center;
-}
-
-.choose-box h3{
-color:#FFD700;
 margin-bottom:15px;
+font-size:22px;
 }
 
-.cta{
-background:linear-gradient(135deg,#0B3D91,#06245a);
-padding:80px 30px;
-text-align:center;
-color:#fff;
-margin-top:80px;
-}
-
-.cta h2{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.cta p{
-font-size:18px;
-max-width:700px;
-margin:auto;
+.product-card p{
+color:#666;
 line-height:1.8;
 }
 
-.cta a{
-display:inline-block;
-margin-top:35px;
-padding:16px 38px;
-background:#FFD700;
-color:#000;
-text-decoration:none;
-border-radius:40px;
-font-weight:600;
-}
-
 </style>
-
-<!-- PRODUCTS -->
-
-<section class="section" id="products">
-
-<h2 class="section-title">Product Categories</h2>
-
-<p class="section-subtitle">
-Quality products from trusted brands.
-</p>
-
-<div class="product-grid">
-
-<div class="product-card">
-<h3>Face Makeup</h3>
-<p>Foundation, Compact, Primer & More</p>
-</div>
-
-<div class="product-card">
-<h3>Eye Makeup</h3>
-<p>Kajal, Eyeliner, Mascara</p>
-</div>
-
-<div class="product-card">
-<h3>Lip Products</h3>
-<p>Lipstick, Lip Balm, Lip Gloss</p>
-</div>
-
-<div class="product-card">
-<h3>Skin Care</h3>
-<p>Face Wash, Cream, Serum</p>
-</div>
-
-<div class="product-card">
-<h3>Hair Care</h3>
-<p>Hair Oil, Shampoo & Conditioner</p>
-</div>
-
-<div class="product-card">
-<h3>Personal Care</h3>
-<p>Daily Essential Beauty Products</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- WHY CHOOSE US -->
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
 
 <section class="section">
 
-<h2 class="section-title">Why Choose Sarkar Enterprise?</h2>
+<h2 class="title">Why Choose Sarkar Enterprise?</h2>
+
+<p class="subtitle">
+Building long-term relationships through trust, quality and service.
+</p>
 
 <div class="choose-grid">
 
-<div class="choose-box">
-<h3>100% Genuine</h3>
-<p>Authentic products from trusted brands.</p>
+<div class="choose-card">
+<h3>✔ Genuine Products</h3>
+<p>We supply only authentic cosmetic and personal care products from trusted brands.</p>
 </div>
 
-<div class="choose-box">
-<h3>Fast Delivery</h3>
-<p>Reliable and timely product supply.</p>
+<div class="choose-card">
+<h3>🚚 Fast Distribution</h3>
+<p>Timely delivery to retailers with reliable logistics support.</p>
 </div>
 
-<div class="choose-box">
-<h3>Business Support</h3>
-<p>Helping retailers grow with confidence.</p>
+<div class="choose-card">
+<h3>🤝 Trusted Partnership</h3>
+<p>We believe in long-term business relationships based on honesty and commitment.</p>
 </div>
 
-<div class="choose-box">
-<h3>Trusted Service</h3>
-<p>Professional distribution with commitment.</p>
+<div class="choose-card">
+<h3>⭐ Customer Satisfaction</h3>
+<p>Our priority is excellent service and complete retailer satisfaction.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- RETAIL PARTNER -->
 
-<section class="cta">
+<!-- =========================
+     RETAIL PARTNER
+========================= -->
+
+<section class="partner-section">
 
 <h2>Become a Retail Partner</h2>
 
 <p>
 
-Join SARKAR ENTERPRISE and grow your business with trusted cosmetic brands and reliable distribution support.
+Join the SARKAR ENTERPRISE distribution network and grow your business with trusted cosmetic brands.
 
 </p>
 
-<a href="#contact">Register Today</a>
+<div class="partner-buttons">
+
+<a href="#contact" class="partner-btn">Register Now</a>
+
+<a href="https://wa.me/917872126926" target="_blank" class="partner-btn outline">
+
+WhatsApp Us
+
+</a>
+
+</div>
 
 </section>
+
+
 <style>
 
-.contact-grid{
+.choose-grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
 gap:30px;
+
 margin-top:50px;
+
 }
 
-.contact-card{
-background:#fff;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+.choose-card{
+
+background:#ffffff;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
 }
 
-.contact-card h3{
+.choose-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.choose-card h3{
+
 color:#0B3D91;
-margin-bottom:20px;
+
+margin-bottom:15px;
+
+font-size:22px;
+
 }
 
-.contact-card p{
-line-height:1.9;
-color:#555;
+.choose-card p{
+
+color:#666;
+
+line-height:1.8;
+
 }
 
-iframe{
-width:100%;
-height:320px;
-border:none;
-border-radius:15px;
-}
+.partner-section{
 
-footer{
-background:#0B3D91;
-color:#fff;
+background:linear-gradient(135deg,#0B3D91,#062b67);
+
+padding:90px 8%;
+
 text-align:center;
-padding:40px 20px;
-margin-top:80px;
-}
 
-footer h2{
-color:#FFD700;
-margin-bottom:10px;
-}
-
-footer p{
-margin:8px 0;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
 color:#fff;
+
+margin-top:80px;
+
+}
+
+.partner-section h2{
+
+font-size:44px;
+
+margin-bottom:20px;
+
+color:#FFD700;
+
+}
+
+.partner-section p{
+
+font-size:19px;
+
+max-width:750px;
+
+margin:auto;
+
+line-height:1.8;
+
+}
+
+.partner-buttons{
+
+margin-top:40px;
+
+}
+
+.partner-btn{
+
+display:inline-block;
+
+margin:10px;
+
+padding:16px 38px;
+
+background:#FFD700;
+
+color:#000;
+
 text-decoration:none;
-padding:15px 20px;
+
 border-radius:50px;
+
 font-weight:600;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-z-index:999;
+
+transition:.3s;
+
 }
 
-.whatsapp:hover{
-background:#128C7E;
+.partner-btn:hover{
+
+background:#fff;
+
+transform:translateY(-5px);
+
 }
 
-</style>
+.partner-btn.outline{
 
-<!-- CONTACT -->
+background:transparent;
+
+border:2px solid #FFD700;
+
+color:#FFD700;
+
+}
+
+.partner-btn.outline:hover{
+
+background:#FFD700;
+
+color:#000;
+
+}
+
+  </style>
+  <!-- =========================
+     CONTACT SECTION
+========================= -->
 
 <section class="section" id="contact">
 
-<h2 class="section-title">
-Contact Us
-</h2>
+<h2 class="title">Contact Us</h2>
 
-<p class="section-subtitle">
-We are always ready to support our retailers.
+<p class="subtitle">
+We're always ready to support our retailers and business partners.
 </p>
 
-<div class="contact-grid">
+<div class="contact-wrapper">
 
-<div class="contact-card">
+<div class="contact-info">
 
 <h3>SARKAR ENTERPRISE</h3>
 
 <p>
 
-📍 32 Karmakar Para<br>
-Berachampa, Debalaya<br>
-North 24 Parganas<br>
-West Bengal – 743424
+📍 <strong>Address</strong><br>
+32 Karmakar Para,<br>
+Berachampa, Debalaya,<br>
+North 24 Parganas,<br>
+West Bengal - 743424
 
-<br><br>
+</p>
 
-📞 +91 7872126926
+<p>
 
-<br>
+📞 <strong>Phone</strong><br>
+<a href="tel:+917872126926">+91 7872126926</a>
 
-📧 sarkarenterprise.024@gmail.com
+</p>
+
+<p>
+
+📧 <strong>Email</strong><br>
+<a href="mailto:sarkarenterprise.024@gmail.com">
+sarkarenterprise.024@gmail.com
+</a>
+
+</p>
+
+<p>
+
+🕒 <strong>Business Hours</strong><br>
+
+Monday - Saturday<br>
+
+09:00 AM – 08:00 PM
 
 </p>
 
 </div>
 
-<div class="contact-card">
-
-<h3>Location</h3>
+<div class="map-box">
 
 <iframe
+
 src="https://www.google.com/maps?q=Berachampa,West+Bengal&output=embed"
-loading="lazy">
+
+loading="lazy"
+
+allowfullscreen>
+
 </iframe>
 
 </div>
@@ -726,24 +1024,134 @@ loading="lazy">
 
 </section>
 
-<!-- WhatsApp -->
+<style>
 
-<a class="whatsapp"
-href="https://wa.me/917872126926"
+.contact-wrapper{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+margin-top:50px;
+
+}
+
+.contact-info{
+
+background:#ffffff;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.contact-info h3{
+
+color:#0B3D91;
+
+font-size:28px;
+
+margin-bottom:25px;
+
+}
+
+.contact-info p{
+
+margin-bottom:22px;
+
+line-height:1.9;
+
+color:#555;
+
+}
+
+.contact-info a{
+
+text-decoration:none;
+
+color:#0B3D91;
+
+font-weight:600;
+
+}
+
+.contact-info a:hover{
+
+color:#d4a900;
+
+}
+
+.map-box{
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.map-box iframe{
+
+width:100%;
+
+height:100%;
+
+min-height:420px;
+
+border:0;
+
+}
+
+@media(max-width:900px){
+
+.contact-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+  </style>
+  <!-- =========================
+     FLOATING BUTTONS
+========================= -->
+
+<a href="https://wa.me/917872126926"
+class="whatsapp-btn"
 target="_blank">
 
-WhatsApp
+💬
 
 </a>
 
-<!-- Footer -->
+<a href="#home"
+class="top-btn">
+
+↑
+
+</a>
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
+
+<div class="footer-container">
 
 <h2>SARKAR ENTERPRISE</h2>
 
 <p>
+
 Empowering Retailers with Trusted Brands
+
 </p>
 
 <p>
@@ -752,21 +1160,182 @@ Trusted Distributor of Cosmetics & Personal Care Products
 
 </p>
 
+<hr>
+
 <p>
 
-© 2026 SARKAR ENTERPRISE. All Rights Reserved.
+📍 32 Karmakar Para, Berachampa, Debalaya,
+North 24 Parganas,
+West Bengal - 743424
 
 </p>
 
+<p>
+
+📞 +91 7872126926
+
+</p>
+
+<p>
+
+📧 sarkarenterprise.024@gmail.com
+
+</p>
+
+<p style="margin-top:25px;">
+
+© 2026 SARKAR ENTERPRISE.
+All Rights Reserved.
+
+</p>
+
+</div>
+
 </footer>
+
+<style>
+
+footer{
+
+background:#082b6f;
+
+color:#fff;
+
+padding:70px 20px;
+
+text-align:center;
+
+margin-top:80px;
+
+}
+
+.footer-container{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+footer h2{
+
+color:#FFD700;
+
+font-size:34px;
+
+margin-bottom:20px;
+
+}
+
+footer p{
+
+margin:10px 0;
+
+line-height:1.8;
+
+}
+
+footer hr{
+
+margin:30px auto;
+
+width:150px;
+
+border:1px solid rgba(255,255,255,.2);
+
+}
+
+.whatsapp-btn{
+
+position:fixed;
+
+right:20px;
+
+bottom:25px;
+
+width:60px;
+
+height:60px;
+
+background:#25D366;
+
+color:#fff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:28px;
+
+border-radius:50%;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+.whatsapp-btn:hover{
+
+transform:scale(1.1);
+
+}
+
+.top-btn{
+
+position:fixed;
+
+left:20px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+background:#0B3D91;
+
+color:#fff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:24px;
+
+border-radius:50%;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+transition:.3s;
+
+}
+
+.top-btn:hover{
+
+background:#FFD700;
+
+color:#000;
+
+}
+
+</style>
 
 <script>
 
-// Smooth Fade Effect
+window.addEventListener("scroll",function(){
 
-window.addEventListener("scroll",()=>{
-
-document.querySelectorAll(".card,.brand-card,.product-card,.choose-box,.contact-card").forEach(el=>{
+document.querySelectorAll(".about-card,.highlight-box,.brand-card,.product-card,.choose-card,.contact-info,.map-box").forEach(function(el){
 
 let top=el.getBoundingClientRect().top;
 
@@ -782,13 +1351,13 @@ el.style.transform="translateY(0px)";
 
 });
 
-document.querySelectorAll(".card,.brand-card,.product-card,.choose-box,.contact-card").forEach(el=>{
+document.querySelectorAll(".about-card,.highlight-box,.brand-card,.product-card,.choose-card,.contact-info,.map-box").forEach(function(el){
 
 el.style.opacity="0";
 
 el.style.transform="translateY(40px)";
 
-el.style.transition="0.8s";
+el.style.transition="all .8s ease";
 
 });
 
@@ -796,3 +1365,4 @@ el.style.transition="0.8s";
 
 </body>
 </html>
+  
