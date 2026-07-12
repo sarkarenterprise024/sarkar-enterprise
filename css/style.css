@@ -347,3 +347,23 @@ nav ul{
 }
 
 }
+/* Animation */
+
+.card,
+.brand-box,
+.stat-box,
+.cta{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+nav a.active{
+    color:var(--primary);
+    font-weight:700;
+}
