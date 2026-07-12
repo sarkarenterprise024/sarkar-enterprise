@@ -676,3 +676,62 @@ nav ul{
     margin-bottom:12px;
 
 }
+/* ================= MOBILE MENU FINAL ================= */
+
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    background:none;
+    border:none;
+    color:#0B3D91;
+    cursor:pointer;
+}
+
+
+/* Mobile Device */
+
+@media(max-width:768px){
+
+header .container{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.menu-toggle{
+    display:block;
+}
+
+
+nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+
+nav.active{
+    display:block !important;
+}
+
+
+nav ul{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+    text-align:center;
+}
+
+
+nav a{
+    display:block;
+    padding:10px;
+}
+
+}
