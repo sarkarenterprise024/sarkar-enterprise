@@ -103,3 +103,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 
 
 console.log("SARKAR ENTERPRISE V2 Loaded Successfully");
+// Mobile Menu Toggle
+
+const menuBtn = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+if(menuBtn && nav){
+
+    menuBtn.addEventListener("click", function(){
+
+        nav.classList.toggle("active");
+
+    });
+
+}
