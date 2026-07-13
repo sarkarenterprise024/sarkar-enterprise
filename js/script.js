@@ -105,15 +105,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 console.log("SARKAR ENTERPRISE V2 Loaded Successfully");
 // Mobile Menu Toggle
 
-const menuBtn = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
+document.addEventListener("DOMContentLoaded", () => {
 
-if(menuBtn && nav){
+    const menuBtn = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
 
-    menuBtn.addEventListener("click", function(){
+    if(menuBtn && nav){
 
-        nav.classList.toggle("active");
+        menuBtn.addEventListener("click", () => {
 
-    });
+            nav.classList.toggle("active");
 
-}
+            if(nav.classList.contains("active")){
+                menuBtn.innerHTML = "✕";
+            }else{
+                menuBtn.innerHTML = "☰";
+            }
+
+        });
+
+    }
+
+});
